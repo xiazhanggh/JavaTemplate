@@ -1,0 +1,52 @@
+group 'com.build'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+    maven {url 'http://maven.aliyun.com/nexus/content/groups/public/'}
+    mavenCentral()
+}
+
+sourceSets{
+    main{
+        java{ srcDir 'src/main/java' }
+        resources{
+            srcDir 'src/main/resources'
+        }
+    }
+    test{
+        java {srcDir 'src/test/java'}
+        resources{
+            srcDir('src/test/resources')
+        }
+    }
+}
+
+dependencies {
+    // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '1.5.4.RELEASE'
+    // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-jpa
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa', version: '1.5.4.RELEASE'
+    // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-rest
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-data-rest', version: '1.5.4.RELEASE'
+
+    //use thymeleaf 3.0
+    compile("org.thymeleaf:thymeleaf:3.0.2.RELEASE")
+    compile("org.thymeleaf:thymeleaf-spring4:3.0.2.RELEASE")
+    compile("nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect:2.1.1")
+
+    //spring security 4
+    compile("org.springframework.security:spring-security-web:4.2.3.RELEASE")
+    compile("org.springframework.security:spring-security-config:4.2.3.RELEASE")
+
+    // https://mvnrepository.com/artifact/c3p0/c3p0
+    compile group: 'c3p0', name: 'c3p0', version: '0.9.1.2'
+    // https://mvnrepository.com/artifact/org.mariadb.jdbc/mariadb-java-client
+    compile group: 'org.mariadb.jdbc', name: 'mariadb-java-client', version: '2.0.3'
+}
+
+
+
