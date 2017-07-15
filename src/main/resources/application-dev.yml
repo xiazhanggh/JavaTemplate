@@ -40,5 +40,9 @@ spring:
             base-path: /rest
     thymeleaf:
         cache: false
+    #aop
+    aop:
+        auto: true  # Add @EnableAspectJAutoProxy.
+        proxy-target-class: true #true use cglib,false use java implement aop
 
 
