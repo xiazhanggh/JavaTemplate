@@ -29,8 +29,16 @@ spring:
         properties:
             hibernate:
                 dialect: org.hibernate.dialect.MySQL5Dialect
+                generate_statistics: false
+                cache:
+                    use_second_level_cache: true
+                    use_query_cache: true
+                    region:
+                        factory_class: org.hibernate.cache.ehcache.EhCacheRegionFactory
     data:
         rest:
             base-path: /rest
     thymeleaf:
         cache: false
+
+
