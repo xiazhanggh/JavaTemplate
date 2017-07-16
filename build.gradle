@@ -57,6 +57,11 @@ dependencies {
     // https://mvnrepository.com/artifact/net.sf.ehcache/ehcache
     compile group: 'net.sf.ehcache', name: 'ehcache', version: '2.10.3'
 
+
+    // https://mvnrepository.com/artifact/com.corundumstudio.socketio/netty-socketio
+    compile group: 'com.corundumstudio.socketio', name: 'netty-socketio', version: '1.7.12'
+
+
 }
 
 

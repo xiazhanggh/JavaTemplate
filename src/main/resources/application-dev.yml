@@ -45,4 +45,8 @@ spring:
         auto: true  # Add @EnableAspectJAutoProxy.
         proxy-target-class: true #true use cglib,false use java implement aop
 
+msgpush:
+    server:
+        hostname: localhost
+        port: 9092
 
